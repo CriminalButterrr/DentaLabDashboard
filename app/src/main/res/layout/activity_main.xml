@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/app_beige">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
@@ -19,6 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:background="@drawable/white_rectangle_background"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +38,7 @@
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:hint="Search for dentist"
+                android:hint="@string/search_for_dentist"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
                 android:paddingStart="15dp"
@@ -43,19 +46,24 @@
                 android:textSize="16sp"
                 android:importantForAutofill="no"/>
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_notification"
-                android:layout_gravity="center"
-                android:padding="6dp"/>
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_avatar"
+            <ImageButton
+                android:id="@+id/notification_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/ic_notification"
                 android:layout_gravity="center"
-                android:padding="6dp"/>
+                android:contentDescription="Notification Icon"
+                />
+            <ImageButton
+                android:id="@+id/profile_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/ic_avatar"
+                android:layout_gravity="center"
+                android:contentDescription="Profile Icon"
+                />
+
 
 
 
@@ -134,7 +142,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="14sp"
-            android:text="@string/form_nature_of_case"
+            android:text="@string/form_price"
             app:layout_constraintBottom_toTopOf="@id/form_price_input"
             app:layout_constraintTop_toBottomOf="@id/form_case_input"
             />
@@ -153,7 +161,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
-                android:hint="@string/enter_case"/>
+                android:hint="@string/enter_price"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -176,6 +184,7 @@
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView">
 
         <LinearLayout
+            android:id="@+id/add_dentist_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
@@ -185,13 +194,14 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:focusable="true"
             >
             <androidx.cardview.widget.CardView
-                android:id="@+id/add_dentist_btn"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
-                app:cardBackgroundColor="@color/app_beige"
+                app:cardBackgroundColor="@color/app_tan"
                 app:cardCornerRadius="15dp"
                 >
 
@@ -205,8 +215,8 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_height="48sp"
+                android:layout_gravity="center"
                 android:text="@string/add_dentist"
                 android:textColor="@color/black"
                 android:textSize="14sp"
@@ -215,6 +225,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/dentist_list_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
@@ -224,14 +235,15 @@
             android:layout_columnWeight="1"
             android:orientation="vertical"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:focusable="true"
             >
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/dentist_list_btn"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
-                app:cardBackgroundColor="@color/app_beige"
+                app:cardBackgroundColor="@color/app_tan"
                 app:cardCornerRadius="15dp"
                 >
 
@@ -245,15 +257,17 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_height="48sp"
+                android:layout_gravity="center"
                 android:text="@string/dentist_lists"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/transactions_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
@@ -263,14 +277,15 @@
             android:layout_columnWeight="1"
             android:orientation="vertical"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:focusable="true"
             >
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/transactions_btn"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
-                app:cardBackgroundColor="@color/app_beige"
+                app:cardBackgroundColor="@color/app_tan"
                 app:cardCornerRadius="15dp"
                 >
 
@@ -284,12 +299,14 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_height="48sp"
+                android:layout_gravity="center"
                 android:text="@string/transactions"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"/>
 
         </LinearLayout>
 
