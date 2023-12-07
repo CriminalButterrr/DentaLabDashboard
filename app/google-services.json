@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "470135020933",
+    "project_id": "dentalab-65b00",
+    "firebase_url" : "https://dentalab-65b00-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "storage_bucket": "dentalab-65b00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470135020933:android:1b068d4ccca07be8ed38ec",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoaMcvGqGmiYL7_ED5WpsqtBPF5X54JcY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

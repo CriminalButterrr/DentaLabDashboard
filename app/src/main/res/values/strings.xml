@@ -3,13 +3,17 @@
     <string name="add_dentist">Add Dentist</string>
     <string name="dentist_lists">Dentist Lists</string>
     <string name="transactions">Transactions</string>
+    <!--Strings for Forms-->
     <string name="form_dentist_name">Dentist \'s Name</string>
+    <string name="form_dentist_address">Dentist \'s Address</string>
+    <string name="form_dentist_contact">Dentist \'s Contact Number</string>
     <string name="form_nature_of_case">Nature of Case</string>
     <string name="form_price">Price</string>
     <string name="enter_name">Enter dentist \'s name</string>
     <string name="enter_case">Enter nature of case</string>
     <string name="enter_price">Enter price</string>
-    <string name="submit_form">Add Transaction</string>
+    <string name="submit_transaction_form">Add Transaction</string>
+    <string name="submit_dentist_form">Add Dentist</string>
     <string name="search_for_dentist">Search for dentist</string>
     <string name="title_activity_dentist_list">dentist_list</string>
     <!-- Strings used for fragments for navigation -->

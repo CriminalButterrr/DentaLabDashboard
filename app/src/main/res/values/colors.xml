@@ -5,4 +5,5 @@
     <color name="app_blue">#54CAD3</color>
     <color name="app_tan">#F5DBA3</color>
     <color name="app_beige">#F6F1E0</color>
+    <color name="gray">#808080</color>
 </resources>
